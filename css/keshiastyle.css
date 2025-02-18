@@ -4,6 +4,9 @@ body {
     background-color: #f8f1e5; /* cream */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -12,6 +15,10 @@ header {
     color: #fff; /* white */
     padding: 10px;
     text-align: center;
+}
+.container {
+    flex: 1; /* Pushes footer to bottom */
+    padding-bottom: 20px; /* Creates separation */
 }
 
 /* Navbar */
@@ -33,10 +40,10 @@ header {
 
 /* Popup */
 .popup {
-    background-color: #fff; /* white */
-    padding: 20px;
+    background-color: #fff;
+    padding: 5px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* shadow effect */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
 .popup h2 {
@@ -85,20 +92,23 @@ header {
 }
 
 /* Footer */
+footer .container{
+    max-width: 90%;
+}
 footer {
     background-color: #f4deb3; /* tan */
     color: #4d3319; /* brown */
     text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
 }
 
 footer a {
-    color: #4d3319; /* brown */
+    color: #4d3319;
+    text-decoration: none;
 }
 
 footer a:hover {
     color: #7d5a3d; /* darker brown */
+    text-decoration: underline;
 }
