@@ -21,3 +21,17 @@
  function closePopup() {
      document.getElementById('popup').style.display = 'none';
  }
+
+ // Carousel
+ document.addEventListener("DOMContentLoaded", function () {
+    const carouselElement = document.querySelector("#homeCarousel");
+    const carousel = new bootstrap.Carousel(carouselElement);
+
+    document.querySelector("#carouselPause").addEventListener("click", function () {
+        carousel.pause();
+    });
+
+    document.querySelector("#carouselPlay").addEventListener("click", function () {
+        carousel.cycle();
+    });
+});
